@@ -16,28 +16,34 @@ public class PlayPig {
         System.out.print(
                 "Let's Play PIG!\n* See how many turns it takes you to get to 20.\n* Turn ends when you hold or roll a 1.\n* If you roll a 1, you lose all points for the turn.\n* If you hold, you save all points for the turn.\n\n");
     }
+    private int dessionOnRollHold() {
+    	int tempScore=0;
+    	System.out.println("Roll or hold? (r/h): ");
+        Scanner sc = new Scanner(System.in);
+        char c = sc.next().charAt(0);
+    	if (c == 'r') {
+            int tempRoll = rollDice();
+            if (tempRoll == 1) {
+                System.out.println("Turn Over. No Score");
+                break;
+            }
+            tempScore += tempRoll;
+        } else if (c == 'h') {
+            System.out.println("Score for turn: " + tempScore);
+            pig.setTotalScore(pig.getTotalScore() + tempScore);
+            pig.setTurns(turn);
+            System.out.println("total score: " + pig.getTotalScore());
+            break;
+        } else {
+            System.out.println("Wrong input!(enter r/h)");
+        }
+    	return tempScore;
+    }
     private void rollHold() {
     	int tempScore = 0;
     	do {
-            System.out.println("Roll or hold? (r/h): ");
-            Scanner sc = new Scanner(System.in);
-            char c = sc.next().charAt(0);
-            if (c == 'r') {
-                int tempRoll = rollDice();
-                if (tempRoll == 1) {
-                    System.out.println("Turn Over. No Score");
-                    break;
-                }
-                tempScore += tempRoll;
-            } else if (c == 'h') {
-                System.out.println("Score for turn: " + tempScore);
-                pig.setTotalScore(pig.getTotalScore() + tempScore);
-                pig.setTurns(turn);
-                System.out.println("total score: " + pig.getTotalScore());
-                break;
-            } else {
-                System.out.println("Wrong input!(enter r/h)");
-            }
+            tempScore=dessionOnRollHold();
+            
         } while (true);
     }
     public void start() {
