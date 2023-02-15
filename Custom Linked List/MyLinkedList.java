@@ -4,13 +4,14 @@ import java.util.*;
 
 
 public class MyLinkedList<E> implements Iterable<Node<E>>{
-	Node<E> head;
-	int size;
+	private Node<E> head;
+	private int size;
 	
 	public MyLinkedList() {
 		head=null;
 		size=0;
 	}
+	
 	/*Remove element start*/
 	//by element
 	public boolean remove(E x) {
@@ -120,7 +121,20 @@ public class MyLinkedList<E> implements Iterable<Node<E>>{
 	/*Set Iterate*/
 	@Override
 	public Iterator<Node<E>> iterator() {
-		//not working😢😢😢
+		return new Iterator<Node<E>> () {
+			private Node<E> curr=head;
+			 @Override
+			    public boolean hasNext() {
+			        return curr != null;
+			    }
+
+			    @Override
+			    public Node next() {
+			        Node<E> temp = curr;
+			        curr = curr.next;
+			        return temp;
+			    }    
+		};
 	}
 	
 	
