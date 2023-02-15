@@ -3,6 +3,7 @@ package com.monocept.test;
 import java.util.LinkedList;
 
 import com.monocept.model.MyLinkedList;
+import com.monocept.model.Node;
 
 public class TestLinkedList {
 	public static void main(String[] args) {
@@ -21,9 +22,12 @@ public class TestLinkedList {
 		//show list
 		ll.show();
 		
+		ll.add("Delhi");
+		ll.add("Mumbai");
+		ll.show();
 		LinkedList<String> strings=new LinkedList<String>();
-		for(String s:ll) {
-			
+		for(Node<String> node:ll) {
+			System.out.print(node.value+" ");
 		}
 		
 		//System.out.println(ll.get(3));
