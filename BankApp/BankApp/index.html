@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="header" class="default-gradient-bg">
+        <div id="branding">Bank's World</div>
+        <!-- <div id="notification-container">
+            <div id="loader"></div>
+            <div id="notification"><div>done</div></div>
+        </div> -->
+    </div>
+    <div id="main-container" class="hs">
+        <div id="body-container">
+            <div id="controll" class="hide">
+                <div id="welcome">Hello <span id="user-name">Pranoy</span> Welcome to Our Dashboard</div>
+                <div id="options">
+                    <div id="options-inner">
+                        <button id="accounts">Accounts</button>
+                        <button id="passbook">PassBook</button>
+                        <button id="sendmoney">SendMoney</button>
+                    </div>
+                </div>
+            </div>
+            <div id="select-user">
+                <div>Select User to Proced Further</div>
+                <select name="" id="selectUserID">
+                    <option value="">hjhb</option>
+                </select>
+                <button id="sl-btn" onclick="openController();">Go</button>
+            </div>
+            
+            
+            <div id="executation-container">
+                <div id="ex-accounts" class="ex-inner hide">
+                    <table id="tab-acc">
+                        <tr>
+                            <th ><div class="paper-dot"></div></th>
+                            <td class="abb">SBI</td>
+                            <td class="acc">1516112212</td>
+                            <td class="bal">2500</td>
+                        </tr>
+                        <tr>
+                            <td ><div class="paper-dot"></div></td>
+                            <td class="abb">SBI</td>
+                            <td class="acc">1516112212</td>
+                            <td class="bal">2500</td>
+                        </tr>
+                        <tr>
+                            <td ><div class="paper-dot"></div></td>
+                            <td class="abb">PNB</td>
+                            <td class="acc">1516112212</td>
+                            <td class="bal">2500</td>
+                        </tr>
+                        <tr>
+                            <td ><div class="paper-dot"></div></td>
+                            <td class="abb">BOI</td>
+                            <td class="acc">1516112212</td>
+                            <td class="bal">2500</td>
+                        </tr>
+                        <tr>
+                            <td ><div class="paper-dot"></div></td>
+                            <td></td>
+                            <td></td>
+                            <td id="total" class="bal">5000</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="ex-passbook" class="ex-inner hide">
+                    <select name="" id="pass-choose-acc"></select>
+                        
+                        <table id="tab-pass">
+                            <tr>
+                                <th ><div class="paper-dot"></div></th>
+                                <th>Id</th>
+                                <th>Acc No</th>
+                                <th>Tr-Type</th>
+                                <th>Remerks</th>
+                                <th>Amount</th>
+                                <th>Time</th>
+                            </tr>
+                            <tr>
+                                <td ><div class="paper-dot"></div></td>
+                                <td>tr1</td>
+                                <td>123425273</td>
+                                <td>Credited</td>
+                                <td>from 123</td>
+                                <td>2000</td>
+                                <td>12:21 12-23-2032</td>
+                            </tr>
+                            
+                            
+                        </table>
+                        <div id="pagination-container">
+                            <button onclick="prev();">prev</button>
+                            <button onclick="next();">Next</button>
+                        </div>
+                        
+                    
+                </div>
+                <div id="ex-tranjuction" class="ex-inner">
+                    <div id="ext-form">
+                        <select name="" id="extf-sender">
+                            <option value=""></option>
+                        </select>
+                        <div id="extf-sender-name">Enter User Account</div>
+                        <div id="extf-acc">
+                            <select name="" id="extf-sender-bank">
+                                <option value="BOB">BOB</option>
+                                <option value="BOB">BOI</option>
+                                <option value="SBI">SBI</option>
+                                <option value="PNB">PNB</option>
+                            </select>
+                            <!-- <div id="extf-suggest">
+                                 <div class="suggestion-row">Pranoy 12324242</div>
+                                <div class="suggestion-row">Pranoy 12324242</div>
+                                <div class="suggestion-row">Pranoy 12324242</div>
+                                <div class="suggestion-row">Pranoy 12324242</div>
+                                <div class="suggestion-row">Pranoy 12324242</div>
+                                <div class="suggestion-row">Pranoy 12324242</div>
+                                <div class="suggestion-row">Pranoy 12324242</div>
+                                <div class="suggestion-row">Pranoy 12324242</div>
+                                <div class="suggestion-row">Pranoy 12324242</div>
+                                <div class="suggestion-row">Pranoy 12324242</div> 
+                            </div> -->
+                            <input type="number" name="" id="extf-acc-no" placeholder="Acc no">
+                        </div>
+                        <input type="number" name="" id="extf-amount" placeholder="Amount">
+                        <button  id="extf-submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="default-gradient-bg">
+            &copy; Pranoy
+        </div>
+    </div>
+    
+</body>
+<script src="./js/user.js"></script>
+</html>
