@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.head-container{
+    height: fit-content;
+    width: 100%;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.inst-logo,.profile-pic{
+    height: 130px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0px;
+}
+.inst-logo{
+    background-image: url("./img/MNNIT-Logo.png");
+    
+}
+.profile-pic{
+    background-image: url("./img/photo.jpg");
+}
+.data,.contacts{
+    height: fit-content;
+    max-width: 300px;
+    width: calc(50% - 110px);
+    padding: 5px;
+    overflow: hidden;
+}
+.data>h5{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.data>div{
+    font-size: 11px;
+    text-align: left;
+    line-height: 20px;
+}
+.contacts>div{
+    font-size: 12px;
+    width: 100%;
+    text-align: left;
+    line-height: 20px;
+}

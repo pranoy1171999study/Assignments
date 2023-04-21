@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.list-container{
+    margin-top: 10px;
+}
+.key{
+    font-weight: 700;
+    font-size: 13px;
+}
+.val{
+    font-size: 12px;
+}

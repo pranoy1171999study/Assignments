@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+table{
+    margin-top: 10px;
+    background-color: #000000;
+    width: 100%;
+}
+th,td{
+   border: 0px solid black;
+   padding: 2px 5px;
+   background-color: #fff;
+   font-size: 13px;
+}
